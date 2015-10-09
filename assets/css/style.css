@@ -1,0 +1,207 @@
+
+/* TOOLS
+================================================== */
+
+.truncateLine{
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* MAIN
+================================================== */
+
+html, body{
+	margin: 0;
+	height: 100%;
+}
+
+body{
+	background: url(img/angularMotion_bg.png) no-repeat top center #8dc6e4;
+	font-family: sans-serif;
+}
+
+#header{
+	width: 100%;
+	height: 300px;
+	background: rgba(39, 50, 54, 0.1);
+	border-bottom: 1px solid #8BD8E2;
+	position: absolute;
+	top: 0;
+	z-index: 1;
+}
+
+#wrapper{
+	width: 500px;
+	height: 100%;
+	margin: 0 auto;
+	background-color: #01B7D4;
+	box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.3);
+	position: relative;
+	border-left: 1px solid #93AFAB;
+	border-right: 1px solid #93AFAB;
+	z-index: 2;
+}
+
+	/* LOGO
+	================================================== */
+
+	#logo{
+		width: 200px;
+		height: 196px;
+		position: absolute;
+		top: 15px;
+		left: -230px;
+	}
+	#logoLinks{
+		width: 200px;
+		height: 20px;
+		position: absolute;
+		top: 215px;
+		left: -225px;
+		color: #FFF;
+		text-align: center;
+		font-size: 14px;
+	}
+		#logoLinks a{
+			color: rgba(255, 255, 255, 0.5);
+			text-decoration: none;
+		}
+		#logoLinks a:hover{
+			color: #FFF;
+		}
+	#twitter,
+	#article{
+		width: 200px;
+		height: 20px;
+		position: absolute;
+		top: 240px;
+		left: -180px;
+		color: #FFF;
+		text-align: center;
+		font-size: 14px;
+		text-decoration: none;
+	}
+	#article{
+	  top: 265px;
+	  left: -182px;
+	}
+
+	/* DAILYMOTION PLAYER
+	================================================== */
+
+	#playerArea{
+		width: 500px;
+		height: 300px;
+		background-color: #000;
+	}
+
+	/* SEARCHBAR
+	================================================== */
+
+	#searchbarArea{
+		width: 100%;
+		height: 60px;
+		overflow: hidden;
+		box-shadow: 0 3px 10px -3px rgba(0, 0, 0, 0.4);
+	}
+		#searchbarArea input{
+			width: 350px;
+			height: 30px;
+			margin: 15px auto;
+			padding: 0 12px;
+			display: block;
+			border-radius: 5px;
+			border: 0px;
+			background-color: #E9EAEB;
+			font-size: 15px;
+			color: #545454;
+			border-bottom: 1px solid #597885;
+			border-right: 1px solid #597885;
+			border-top: 1px solid #103D4E;
+			border-left: 1px solid #103D4E;
+		}
+		#searchbarArea input:focus{
+			outline: 0px
+		}
+
+	/* RESULTS
+	================================================== */
+
+	#resultsArea{
+		height: calc(100% - 360px);
+		padding: 0 5px;
+	}
+		#resultsArea .mCSB_container{
+			margin-right: 15px;
+		}
+		#resultsArea .mCSB_scrollTools .mCSB_draggerContainer{
+			height: calc(100% - 20px);
+			top: 10px;
+		}
+		#resultsArea .video{
+			display: block;
+			position: relative;
+			width: 148px;
+			height: 200px;
+			float: left;
+			margin: 5px;
+			background-color: #FFF;
+			border-radius: 5px;
+			overflow: hidden;
+			box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.21);
+		}
+		#resultsArea .play{
+			height: 196px;
+			width: 144px;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 2;
+			border: 2px solid #FFFEDD;
+			background-color: rgba(248, 231, 104, .95);
+			border-radius: 5px;
+			display: none;
+			font-size: 25px;
+			font-weight: 700;
+			line-height: 200px;
+			text-align: center;
+			color: #FFF;
+			text-shadow: 0px 1px 1px #B8B340;
+			cursor: pointer;
+		}
+		#resultsArea .video:hover .play{
+			display: block;
+		}
+		#resultsArea .video .thumbnail{
+			display: block;
+			width: 148px;
+			height: 90px;
+		}
+		#resultsArea .video .infos{
+			height: 110px;
+		}
+			#resultsArea .video .infos .title{
+				padding: 3px 5px;
+				font-size: 13px;
+				color: #FFF;
+				background-color: #3BAAE1;
+			}
+			#resultsArea .video .infos .description{
+				font-size: 12px;
+				line-height: 1.4;
+				color: #777;
+				height: 63px;
+				padding: 3px 5px;
+				overflow: hidden;
+			}
+			#resultsArea .video .infos .duration{
+				position: absolute;
+				left: 5px;
+				bottom: 5px;
+				font-size: 11px;
+				color: #3BAAE1;
+				z-index: 1;
+			}
+

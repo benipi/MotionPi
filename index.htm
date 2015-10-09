@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en" ng-app="angularMotion">
+<head>
+  <meta charset="UTF-8">
+  <title>DailyMotion</title>
+
+	<!-- Scrollbar -->
+	<link rel="stylesheet" href="libs/Malihu_Scroller/jquery.mCustomScrollbar.css" />
+	<script src="libs/jQuery/jquery-1.10.2.min.js"></script>
+	<script src="libs/Malihu_Scroller/jquery.mCustomScrollbar.min.js"></script>
+
+  <!-- AngularJS -->
+	<script src="libs/AngularJS/angular-1.2.6.min.js"></script>
+
+  <!-- App related -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+	<script src="assets/js/app.js"></script>
+
+</head>
+<body>
+
+<div id="header"></div>
+
+<div id="wrapper" ng-controller="MainCtrl" ng-init="getResults(true)">
+
+	<!-- Dailymotion player -->
+	<div id="playerArea">
+		<iframe id="player" width="500" height="300" frameborder="0" ng-src="{{getVideoUrl()}}"></iframe>
+	</div>
+
+	<!-- Searchbar -->
+	<div id="searchbarArea">
+		<input type="text" ng-model="searchTerms" placeholder="Search on Dailymotion..." ng-change="getResults(true)" ng-click="searchTerms=''" autofocus>
+	</div>
+
+	<!-- Results -->
+	<div id="resultsArea" ng-cloak scrollable>
+		<div class="video" ng-repeat="video in results" ng-cloak>
+			<div class="play" ng-click="playVideo(video.id)">PLAY</div>
+      <img class="thumbnail" ng-src="http://www.dailymotion.com/thumbnail/video/{{video.id}}">
+      <!-- Display the title and description of the video -->
+      <div class="infos">
+        <div class="title truncateLine">{{video.title}}</div>
+        <div class="description" ng-bind-html="trustAsHtml(video.description)"></div>
+        <div class="duration">{{video.duration | toHHMMSS}}</div>
+      </div>
+    </div>
+	</div>
+
+</div>
+
+</body>
+</html>
